@@ -1,0 +1,15 @@
+li {
+    line-height: 31px;
+}
+.bulb {
+    height: 20px;
+    width: 20px;
+    border-radius: 2000px;
+    box-shadow: 2px 2px 5px #848484;
+}
+.green {
+  background-color: #00d265;
+}
+.red {
+  background-color: #ff2e2e;
+}

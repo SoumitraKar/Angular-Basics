@@ -1,16 +1,58 @@
 <b>Output Binding</b> <br>
 
 <ul>
-<li><u>String Interpolation :</u> {{data}} or {{textFromFunc()}}<br>
-<li><u class = "pull-left">Property binding : (innerText)</u>  <div [innerText] = "data" class = "pull-left"></div><br>
-<br><u>Property binding : (value and id)</u>  <input type="text" name="" [value]="data" [id] = "id"><hr>
+<li><u class = "col-xs-5">String Interpolation :</u> <span class = "col-xs-7">{{data}} or {{textFromFunc()}}</span><br>
+<li><u class = "col-xs-5">Property binding : (innerText)</u>  <div [innerText] = "data" class = "col-xs-7"></div><br>
+<li><u class = "col-xs-5">Property binding : (value and id)</u>  <input type="text" name="" [value]="data" [id] = "id" class = "col-xs-7"><hr>
 </ul>
 
 <b>Input Binding</b> <br>
-
-•	<u>Event Binding :</u> <input type="button" value="Click me" class = "btn btn-primary" (click) = "onclickBtn()">
+<ul>
+<li><u class = "col-xs-5">Event Binding (click) :</u> <input type="button" value="Click me" class = "btn btn-xs btn-primary" (click) = "onclickBtn()">
+<li><u class = "col-xs-5">Event Binding (Passing Event) :</u> <input type="text" name="" [value]="data" (input) = "onChangeOfTextBox($event)" class = "col-xs-7">
+</ul>
 <hr>
 
 <b>Two-way binding</b> <br>
 
-•	<input type="text" name="" [(ngModel)]="data"> this is two way binding
+<ul>
+<li><u class = "col-xs-5">Two-way binding</u><input type="text" name="" [(ngModel)]="data" class = "col-xs-7">
+</ul>
+<hr>
+<b>Directives</b> <br><br>
+<ul>
+
+<li class = "col-xs-12"><u>ngIf</u><br>
+<p class = "col-xs-5"> This is visible : </p>
+<p class = "col-xs-7"> [ <span *ngIf = "showthis">Hello</span> ] </p>
+<p class = "col-xs-5"> This is not visible : </p>
+<p class = "col-xs-7"> [ <span *ngIf = "dontShowthis">World</span> ] </p></li>
+<li class = "col-xs-12"><u>ngIf Else </u> <input type="button" class="btn btn-xs btn-success" value="Toggle if else" (click) = "toggleIfElse()"><br>
+<p class = "col-xs-12" *ngIf = "showIf; else showElse"> If is shown </p>
+<ng-template #showElse>
+  <p class = "col-xs-12"> Else is shown </p>
+</ng-template><br></li>
+<li class = "col-xs-12"><u>ngStyle</u><br>
+  <div class="col-xs-2">
+      <div class="bulb" [ngStyle]="{backgroundColor: (showIf)?'#00d265':'#ff2e2e'}">
+    </div>
+  </div>
+  <span class = "col-xs-10">Click on <b>Toggle if else button</b> to change color</span>
+</li>
+<li class = "col-xs-12"><u>ngClass</u><br>
+  <div class="col-xs-2">
+      <div class="bulb" [ngClass]="{green: showIf, red: !showIf}">
+    </div>
+  </div>
+  <span class = "col-xs-10">Click on <b>Toggle if else button</b> to change color</span>
+</li>
+<li class = "col-xs-12"><u>ngFor</u><br>
+  <div class="col-xs-2">
+      <input type="button" class="btn btn-xs btn-danger" value="Click to add" (click) = "additems()">
+  </div>
+  <span class = "col-xs-10">Click on <b>Click to add</b> to add items</span><br>
+  <ul>
+    <li *ngFor = "let item of items">{{item}}</li>
+  </ul>
+</li>
+</ul>

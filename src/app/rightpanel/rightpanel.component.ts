@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Injectable, Pipe  } from '@angular/core';
+// import { } from '@angular/core';
 
 @Component({
   selector: 'app-rightpanel',
@@ -21,7 +22,7 @@ export class RightpanelComponent implements OnInit {
   dontShowthis = false;
   showIf = true;
   items = ['item 1', 'item 2'];
-  
+
   toggleIfElse() {
     this.showIf = !this.showIf;
   }

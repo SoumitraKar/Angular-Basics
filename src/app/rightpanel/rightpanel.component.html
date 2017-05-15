@@ -1,58 +1,113 @@
 <b>Output Binding</b> <br>
 
 <ul>
-<li><u class = "col-xs-5">String Interpolation :</u> <span class = "col-xs-7">{{data}} or {{textFromFunc()}}</span><br>
-<li><u class = "col-xs-5">Property binding : (innerText)</u>  <div [innerText] = "data" class = "col-xs-7"></div><br>
-<li><u class = "col-xs-5">Property binding : (value and id)</u>  <input type="text" name="" [value]="data" [id] = "id" class = "col-xs-7"><hr>
+<li class="row">
+    <u class = "col-sm-5">String Interpolation :</u> <span class = "col-sm-7">{{data}} or {{textFromFunc()}}</span>
+<li><u class = "col-sm-5">Property binding : (innerText)</u>  <div [innerText] = "data" class = "col-sm-7"></div><br>
+<li><u class = "col-sm-5">Property binding : (value and id)</u>  <input type="text" name="" [value]="data" [id] = "id" class = "col-sm-7"><hr>
 </ul>
 
 <b>Input Binding</b> <br>
 <ul>
-<li><u class = "col-xs-5">Event Binding (click) :</u> <input type="button" value="Click me" class = "btn btn-xs btn-primary" (click) = "onclickBtn()">
-<li><u class = "col-xs-5">Event Binding (Passing Event) :</u> <input type="text" name="" [value]="data" (input) = "onChangeOfTextBox($event)" class = "col-xs-7">
+<li><u class = "col-sm-5">Event Binding (click) :</u> <input type="button" value="Click me" class = "btn btn-sm btn-primary" (click) = "onclickBtn()">
+<li><u class = "col-sm-5">Event Binding (Passing Event) :</u> <input type="text" name="" [value]="data" (input) = "onChangeOfTextBox($event)" class = "col-sm-7">
 </ul>
 <hr>
 
 <b>Two-way binding</b> <br>
 
-<ul>
-<li><u class = "col-xs-5">Two-way binding</u><input type="text" name="" [(ngModel)]="data" class = "col-xs-7">
+<ul >
+<li>
+  <div class="row">
+
+  </div><u class = "col-sm-5">Two-way binding</u><input type="text" name="" [(ngModel)]="data" class = "col-sm-7">
 </ul>
 <hr>
 <b>Directives</b> <br><br>
 <ul>
 
-<li class = "col-xs-12"><u>ngIf</u><br>
-<p class = "col-xs-5"> This is visible : </p>
-<p class = "col-xs-7"> [ <span *ngIf = "showthis">Hello</span> ] </p>
-<p class = "col-xs-5"> This is not visible : </p>
-<p class = "col-xs-7"> [ <span *ngIf = "dontShowthis">World</span> ] </p></li>
-<li class = "col-xs-12"><u>ngIf Else </u> <input type="button" class="btn btn-xs btn-success" value="Toggle if else" (click) = "toggleIfElse()"><br>
-<p class = "col-xs-12" *ngIf = "showIf; else showElse"> If is shown </p>
+<li class = "col-12"><u>ngIf</u><br>
+<div class = "row">
+  <p class = "col-sm-5"> This is visible : </p>
+  <p class = "col-sm-7"> [ <span *ngIf = "showthis">Hello</span> ] </p>
+</div>
+<div class = "row">
+  <p class = "col-sm-5"> This is not visible : </p>
+  <p class = "col-sm-7"> [ <span *ngIf = "dontShowthis">World</span> ] </p>
+</div>
+</li>
+<li class = "col-12"><u>ngIf Else </u> <input type="button" class="btn btn-sm btn-success" value="Toggle if else" (click) = "toggleIfElse()"><br>
+<p class = "col-12" *ngIf = "showIf; else showElse"> If is shown </p>
 <ng-template #showElse>
-  <p class = "col-xs-12"> Else is shown </p>
+  <p class = "col-12"> Else is shown </p>
 </ng-template><br></li>
-<li class = "col-xs-12"><u>ngStyle</u><br>
-  <div class="col-xs-2">
+<li class = "col-12"><u>ngStyle</u><br>
+  <div class="col-2">
       <div class="bulb" [ngStyle]="{backgroundColor: (showIf)?'#00d265':'#ff2e2e'}">
     </div>
   </div>
-  <span class = "col-xs-10">Click on <b>Toggle if else button</b> to change color</span>
+  <span class = "col-10">Click on <b>Toggle if else button</b> to change color</span>
 </li>
-<li class = "col-xs-12"><u>ngClass</u><br>
-  <div class="col-xs-2">
+<li class = "col-12"><u>ngClass</u><br>
+  <div class="col-2">
       <div class="bulb" [ngClass]="{green: showIf, red: !showIf}">
     </div>
   </div>
-  <span class = "col-xs-10">Click on <b>Toggle if else button</b> to change color</span>
+  <span class = "col-10">Click on <b>Toggle if else button</b> to change color</span>
 </li>
-<li class = "col-xs-12"><u>ngFor</u><br>
-  <div class="col-xs-2">
-      <input type="button" class="btn btn-xs btn-danger" value="Click to add" (click) = "additems()">
+<li class = "col-12"><u>ngFor</u><br>
+  <div class="col-2">
+      <input type="button" class="btn btn-sm btn-danger" value="Click to add" (click) = "additems()">
   </div>
-  <span class = "col-xs-10">Click on <b>Click to add</b> to add items</span><br>
+  <span class = "col-10">Click on <b>Click to add</b> to add items</span><br>
   <ul>
     <li *ngFor = "let item of items">{{item}}</li>
   </ul>
 </li>
 </ul>
+<hr>
+<ng-template #content let-c="close" let-d="dismiss">
+  <div class="modal-header">
+    <h4 class="modal-title">Modal title</h4>
+    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <p>One fine body&hellip;</p>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-secondary" (click)="c('Close click')">Close</button>
+  </div>
+</ng-template>
+
+<button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button>
+
+
+<h4><b>Carousel </b></h4>
+<div class = "carousel_container">
+<ngb-carousel>
+  <ng-template ngbSlide>
+    <img src="http://www.tonybates.ca/wp-content/uploads/World-Wide-Web-map.jpg" class = "carousel_img">
+    <div class="carousel-caption">
+      <h3>First slide label</h3>
+      <p>Hakuna ma ta ta</p>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <img src="http://photography-cameras.org/images/stories/wide-angle-lens.jpg" class = "carousel_img">
+    <div class="carousel-caption">
+      <h3>Second slide label</h3>
+      <p>Jinga la la</p>
+    </div>
+  </ng-template>
+  <ng-template ngbSlide>
+    <img src="http://hd.wallpaperswide.com/thumbs/at_lands_end-t2.jpg" class = "carousel_img">
+    <div class="carousel-caption">
+      <h3>Second slide label</h3>
+      <p>Jinga la la</p>
+    </div>
+  </ng-template>
+</ngb-carousel>
+</div>
+<br><br><br>

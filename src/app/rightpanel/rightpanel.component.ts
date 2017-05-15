@@ -1,5 +1,5 @@
-import { Component, OnInit,Injectable, Pipe  } from '@angular/core';
-// import { } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-rightpanel',
@@ -8,7 +8,7 @@ import { Component, OnInit,Injectable, Pipe  } from '@angular/core';
 })
 export class RightpanelComponent implements OnInit {
 
-  constructor() {
+  constructor(private modalService: NgbModal) {
   //alert("constructor");
   }
 
@@ -40,5 +40,26 @@ export class RightpanelComponent implements OnInit {
     this.items.push(item);
     console.log(this.items)
   }
+
+  // Modal Code Start
+  closeResult: string;
+  open(content) {
+    this.modalService.open(content).result.then((result) => {
+      this.closeResult = `Closed with: ${result}`;
+    }, (reason) => {
+      this.closeResult = `Dismissed ${this.getDismissReason(reason)}`;
+    });
+  }
+
+  private getDismissReason(reason: any): string {
+    if (reason === ModalDismissReasons.ESC) {
+      return 'by pressing ESC';
+    } else if (reason === ModalDismissReasons.BACKDROP_CLICK) {
+      return 'by clicking on a backdrop';
+    } else {
+      return  `with: ${reason}`;
+    }
+  }
+  // Modal Code Ends
 
 }

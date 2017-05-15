@@ -13,3 +13,11 @@ li {
 .red {
   background-color: #ff2e2e;
 }
+.carousel_container{
+    float: left;
+    width: 100%;
+}
+.carousel_img {
+  width: 100%;
+  height: 350px;
+}

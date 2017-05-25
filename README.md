@@ -3,14 +3,14 @@
 
 ## Installation 
 
-1. Requirements 
+**1. Requirements**
 
 
 •	Node Js (Latest Version, Doesn’t work on older version)
 
 •	NPM Latest Version
 
-2. On Command Prompt
+**2. On Command Prompt**
 
 •	Npm install –g @angular/cli (Install angular 4 cli)
 

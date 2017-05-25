@@ -26,8 +26,8 @@
 
 # Follow "Angular 4 Guide.docx" for detailed Description
 
-## Thanks
+**Thanks**
 
-## Soumitra Kar
+**Soumitra Kar**
 
-## sksoumitrakar@gmail.com
+**sksoumitrakar@gmail.com**

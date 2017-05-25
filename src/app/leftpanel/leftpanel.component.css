@@ -1,33 +1,69 @@
 .left-panel{
   position: fixed;
   left: 0px;
-  top: 50px;
-  height: calc(100% - 50px);
-  width: 220px;
+  top: 42px;
+  height: calc(100% - 42px);
+  width: 250px;
   padding: 6px;
   background-color: #286090;
   color: #d2eaff;
+  z-index: 1;
   box-shadow: 0px 1px 9px black;
-  -webkit-transition:left 0.5s ease-in-out;
-  -moz-transition:left 0.5s ease-in-out;
-  -o-transition:left 0.5s ease-in-out;
-  transition:left 0.5s ease-in-out;
+  -webkit-transition:width 0.5s ease-in-out;
+  -moz-transition:width 0.5s ease-in-out;
+  -o-transition:width 0.5s ease-in-out;
+  transition:width 0.5s ease-in-out;
 }
 .left-panel-hide {
-  left: -220px;
-  -webkit-transition:left 0.5s ease-in-out;
-  -moz-transition:left 0.5s ease-in-out;
-  -o-transition:left 0.5s ease-in-out;
-  transition:left 0.5s ease-in-out;
+  width: 36px;
+  -webkit-transition:width 0.5s ease-in-out;
+  -moz-transition:width 0.5s ease-in-out;
+  -o-transition:width 0.5s ease-in-out;
+  transition:width 0.5s ease-in-out;
 }
 .left-panel-toggle {
-  height: 25px;
-  width: 25px;
-  background-color: #052d50;
-  float: right;
-  margin-right: -31px;
-  border-radius: 0px 10px 10px 0px;
-  color: white;
-  padding: 3px 5px;
-  cursor: pointer;
+    position: fixed;
+    color: #63ff9a;
+    cursor: pointer;
+    left: 220px;
+    -webkit-transition:all 0.5s ease-in-out;
+    -moz-transition:all 0.5s ease-in-out;
+    -o-transition:all 0.5s ease-in-out;
+    transition:all 0.5s ease-in-out;    
+    
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
+.left-panel-hide .left-panel-toggle {
+    left: 12px;
+    -webkit-transition:all 0.5s ease-in-out;
+    -moz-transition:all 0.5s ease-in-out;
+    -o-transition:all 0.5s ease-in-out;
+    transition:all 0.5s ease-in-out;
+     
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(0deg);
+  
+}
+.left-panel-hide td.menu-text {
+    border-bottom: 0px;
+    opacity: 0;
+    /*visibility: hidden;*/
+    -webkit-transition:all 0.5s ease-in-out;
+    -moz-transition:all 0.5s ease-in-out;
+    -o-transition:all 0.5s ease-in-out;
+    transition:all 0.5s ease-in-out;
+}
+.left-container {
+    width: 100%;
+    position: absolute;
+    left: 0px;
+    margin-top: 40px;
+    line-height: 44px;
 }

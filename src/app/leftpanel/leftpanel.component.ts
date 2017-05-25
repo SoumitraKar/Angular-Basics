@@ -1,25 +1,31 @@
-import { Component } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
-@Component({
-  host: {
-    '(document:click)': 'onClick($event)',
-  },
+@Component({    
   selector: 'app-leftpanel',
   templateUrl: './leftpanel.component.html',
   styleUrls: ['./leftpanel.component.css']
 })
 
 export class LeftPanelComponent {
+  cunstructor (){};
+  @Output() linkChange = new EventEmitter<string>();
+  @Output() toggleLeftPanel = new EventEmitter<boolean>();
+
   teftpanelshow = false;
+  selected = 'BASICS';
+  hovering = "";
   leftpaneltoggle(){
     this.teftpanelshow = !this.teftpanelshow;
+    this.toggleLeftPanel.emit(this.teftpanelshow);
   }
-  onClick(event: Event){
-    if ( (<HTMLInputElement>event.target).className  != 'left-panel' &&
-    (<HTMLInputElement>event.target).className  != 'left-panel-toggle' &&
-    (<HTMLInputElement>(<HTMLInputElement>event.target).parentNode).className  != 'left-panel' &&
-    (<HTMLInputElement>(<HTMLInputElement>event.target).parentNode).className  != 'left-panel-toggle') {
-        this.teftpanelshow = false;
-    }
+  select(data) {
+    this.selected = data;
+    this.linkChange.emit(data);
+  }
+  hoveron(data){
+    this.hovering = data;    
+  }
+  removehover() {
+    this.hovering = "";  
   }
 }

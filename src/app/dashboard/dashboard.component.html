@@ -1,0 +1,43 @@
+<div class="row full-spread">
+  <div class="col-md-8">
+    <div class="row">
+      <div class="col-sm-6 box-container">
+        <h5 class = "boxheading">heading 1</h5>
+        <div class="col-12 box box-sm">
+          <h6> Check box </h6>
+          <label class="custom-control custom-checkbox">
+            <input type="checkbox" class="custom-control-input">
+            <span class="custom-control-indicator"></span>
+            <span class="custom-control-description">Lorem ipsum dolor sit amet
+            </span>
+          </label>
+        </div>
+      </div>
+      <div class="col-sm-6 box-container">
+        <h5 class = "boxheading">heading 2</h5>
+        <div class="col-12 box box-sm">
+          <div class="card" style="max-width: 20rem;">
+            <h3 class="card-header">
+            Json Data
+            </h3>
+            <div class="card-block">
+              <h4 class="card-title">Ugg Boots</h4>
+              <p class="card-text">{{jsonValue}}</p>
+            </div>
+            <div class="card-footer">
+              <input type="button" class = "btn btn-sm btn-primary" (click) = "getJsonFromService()" value = "Get Json">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 box-container">
+        <h5 class = "boxheading">heading 3</h5>
+        <div class="col-12 box box-xs">3</div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-4 box-container full-spread">
+        <h5 class = "boxheading ">heading 4</h5>
+    <div class="col-12 box box-lg">4</div>
+  </div>
+</div>

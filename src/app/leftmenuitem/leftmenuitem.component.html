@@ -1,0 +1,12 @@
+<div class="item-container"  [ngClass] = "{leftPanelHide: !visible, selected: (selectedone == text)}"> 
+  <div class="item-icon">
+    <i class="fa {{icon}}" aria-hidden="true"></i>
+  </div>
+  <div class="item-text">
+    {{text}}
+  </div>
+  <div class="hovering-text"  [ngClass] = "{hovering: (hoveringon == text && !visible)}">
+    {{text}}
+  </div>
+</div>
+

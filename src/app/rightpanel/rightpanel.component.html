@@ -1,16 +1,30 @@
+<h2>Basics of Angular</h2>
 <b>Output Binding</b> <br>
-
 <ul>
-<li class="row">
+<li>
+  <div class="row">
     <u class = "col-sm-5">String Interpolation :</u> <span class = "col-sm-7">{{data}} or {{textFromFunc()}}</span>
-<li><u class = "col-sm-5">Property binding : (innerText)</u>  <div [innerText] = "data" class = "col-sm-7"></div><br>
-<li><u class = "col-sm-5">Property binding : (value and id)</u>  <input type="text" name="" [value]="data" [id] = "id" class = "col-sm-7"><hr>
+  </div>
+<li>
+  <div class="row">
+    <u class = "col-sm-5">Property binding : (innerText)</u>  <div [innerText] = "data" class = "col-sm-7"></div><br>
+  </div>
+<li>
+  <div class="row">
+    <u class = "col-sm-5">Property binding : (value and id)</u>  <input type="text" name="" [value]="data" [id] = "id" class = "col-sm-7"><hr>
+  </div>
 </ul>
 
 <b>Input Binding</b> <br>
 <ul>
-<li><u class = "col-sm-5">Event Binding (click) :</u> <input type="button" value="Click me" class = "btn btn-sm btn-primary" (click) = "onclickBtn()">
-<li><u class = "col-sm-5">Event Binding (Passing Event) :</u> <input type="text" name="" [value]="data" (input) = "onChangeOfTextBox($event)" class = "col-sm-7">
+<li>
+  <div class="row">
+    <u class = "col-sm-5">Event Binding (click) :</u> <input type="button" value="Click to cahnge text" class = "btn btn-sm btn-primary" (click) = "onclickBtn()">
+  </div>
+<li>
+  <div class="row">
+    <u class = "col-sm-5">Event Binding (Passing Event) :</u> <input type="text" name="" [value]="data" (input) = "onChangeOfTextBox($event)" class = "col-sm-7">
+  </div>
 </ul>
 <hr>
 
@@ -19,8 +33,8 @@
 <ul >
 <li>
   <div class="row">
-
-  </div><u class = "col-sm-5">Two-way binding</u><input type="text" name="" [(ngModel)]="data" class = "col-sm-7">
+    <u class = "col-sm-5">Two-way binding</u><input type="text" name="" [(ngModel)]="data" class = "col-sm-7">
+  </div>
 </ul>
 <hr>
 <b>Directives</b> <br><br>
@@ -40,7 +54,7 @@
 <p class = "col-12" *ngIf = "showIf; else showElse"> If is shown </p>
 <ng-template #showElse>
   <p class = "col-12"> Else is shown </p>
-</ng-template><br></li>
+</ng-template></li>
 <li class = "col-12"><u>ngStyle</u><br>
   <div class="col-2">
       <div class="bulb" [ngStyle]="{backgroundColor: (showIf)?'#00d265':'#ff2e2e'}">

@@ -1,0 +1,10 @@
+.box {
+    background-color: #eaeaea;
+}
+.box-container {
+    padding-right: 0px;
+    margin: 9px 0px;
+}
+.box.box-lg {
+    height: calc(100% - 40px);
+}

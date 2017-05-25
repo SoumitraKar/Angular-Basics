@@ -23,3 +23,11 @@
 •	ng serve --port 8089 (Starts server at 8089 port)
 
 •	or ng-serve (start server at 4200 port)
+
+# Follow "Angular 4 Guide.docx" for detailed Description
+
+## Thanks
+
+## Soumitra Kar
+
+## sksoumitrakar@gmail.com

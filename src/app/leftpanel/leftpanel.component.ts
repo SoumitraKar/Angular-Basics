@@ -1,6 +1,6 @@
 import { Component, Output, EventEmitter } from '@angular/core';
 
-@Component({    
+@Component({
   selector: 'app-leftpanel',
   templateUrl: './leftpanel.component.html',
   styleUrls: ['./leftpanel.component.css']
@@ -23,9 +23,9 @@ export class LeftPanelComponent {
     this.linkChange.emit(data);
   }
   hoveron(data){
-    this.hovering = data;    
+    this.hovering = data;
   }
   removehover() {
-    this.hovering = "";  
+    this.hovering = "";
   }
 }

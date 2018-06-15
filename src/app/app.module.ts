@@ -13,6 +13,7 @@ import { LeftmenuitemComponent } from './leftmenuitem/leftmenuitem.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AboutmeComponent } from './aboutme/aboutme.component';
 import { ChildComponent } from './child/child.component';
+import { PipeComponent } from './pipe/pipe.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { ChildComponent } from './child/child.component';
     LeftmenuitemComponent,
     DashboardComponent,
     AboutmeComponent,
-    ChildComponent
+    ChildComponent,
+    PipeComponent
   ],
   imports: [
     BrowserModule,

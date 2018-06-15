@@ -20,7 +20,7 @@
 <li>
   <div class="row">
     <u class = "col-sm-5">Event Binding (click) :</u> <input type="button" value="Click to cahnge text" class = "btn btn-sm btn-primary" (click) = "onclickBtn()">
-    <small>Check code for demonstration of for Each loop, Arrow function, for in loop, for of loop</small>
+    <small><b class = "text-info">NB: </b><b class = "text-danger">Check code for demonstration of for Each loop, Arrow function, for in loop, for of loop</b></small>
   </div>
 <li>
   <div class="row">
@@ -81,63 +81,19 @@
 </li>
 </ul>
 <hr>
-<h4>PIPE</h4>
-<table>
-  <tr>
-    <th>Lower case</th>
-    <td>{{data | lowercase}}</td>
-  </tr>
-  <tr>
-    <th>Upper case</th>
-    <td>{{data | uppercase}}</td>
-  </tr>
-  <tr>
-    <th>Title case</th>
-    <td>{{data | titlecase}}</td>
-  </tr>
-  <tr>
-    <th>Slice</th>
-    <td>{{data | slice:6:15}}</td>
-  </tr>
-  <tr>
-    <th>JSON</th>
-    <td>{{items | json}}</td>
-  </tr>
-  <tr>
-    <th>Number</th>
-    <td>{{aNumber | number:'3.3-4'}} <input type="number" name="" [(ngModel)]="aNumber"></td>
-  </tr>
-  <tr>
-    <th></th>
-    <td><small>Minimum 3 digit before decimal, Minimum 3 digit after decimal and maximum 4 digit after decimal</small></td>
-  </tr>
-  <tr>
-    <th>Currency</th>
-    <td>{{2000 | currency: 'INR'}}</td>
-  </tr>
-  <tr>
-    <th>date(short)</th>
-    <td>{{dateVar | date:'short'}}</td>
-  </tr>
-  <tr>
-    <th>date(shortDate)</th>
-    <td>{{dateVar | date:'shortDate'}}</td>
-  </tr>
-  <tr>
-    <th>date(shortTime)</th>
-    <td>{{dateVar | date:'shortTime'}}</td>
-  </tr>
-</table>
+<b>PIPE</b><br><br>
+<app-pipe></app-pipe>
+
 <hr>
-<h4>PARENT-CHIELD component Interaction</h4>
+<b>PARENT-CHIELD component Interaction</b><br><br>
   <div class="row parent-container">
     <h6>PARENT COMPONENT</h6>
     <span class = "col-12" *ngIf = "calledFromChildCtr > 0">Parent function called by child <b>{{calledFromChildCtr}}</b> times</span>
-    <span class = "col-12"><button type="button" class="green-small" (click) = "callChildFunction()">Call Child Function</button></span>
+    <span class = "col-12"><button type="button" class="btn btn-sm btn-success" (click) = "callChildFunction()">Call Child Function</button></span>
     <app-child class = "col-12" #childComponent parentValue = "'This is passed from parent'" (callParentFunction) = "parentFunction($event)"></app-child>
   </div>
 <hr>
-<h4>BOOTSTRAP</h4>
+<b>Bootstrap</b><br><br>
 <ng-template #content let-c="close" let-d="dismiss">
   <div class="modal-header">
     <h4 class="modal-title">Modal title</h4>

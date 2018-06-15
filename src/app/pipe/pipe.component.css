@@ -1,0 +1,8 @@
+td.heading {
+    font-weight: 500;
+    width: 166px;
+}
+tbody {
+    border: 1px solid #eceeef !important;
+    background-color: #f8f8f8;
+}

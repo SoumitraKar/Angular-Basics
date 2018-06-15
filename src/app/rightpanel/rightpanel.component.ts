@@ -8,7 +8,6 @@ import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 })
 export class RightpanelComponent implements OnInit {
   data ='Text From Variable';
-  aNumber:number = 76.55
   id = "text1";
   dataString = 'Text From Function';
   showthis = true;
@@ -17,7 +16,6 @@ export class RightpanelComponent implements OnInit {
   items = ['item 1', 'item 2'];
   calledFromChildCtr:number = 0;
   childCalledCounter:number = 0;
-  dateVar:any = new Date()
 
   @ViewChild('childComponent') childRefference;
 

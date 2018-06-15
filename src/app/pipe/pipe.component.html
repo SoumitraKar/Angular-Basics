@@ -1,0 +1,46 @@
+<table class="table">
+  <tr>
+    <td class="heading">Lower case</td>
+    <td>{{data | lowercase}}</td>
+  </tr>
+  <tr>
+    <td class="heading">Upper case</td>
+    <td>{{data | uppercase}}</td>
+  </tr>
+  <tr>
+    <td class="heading">Title case</td>
+    <td>{{data | titlecase}}</td>
+  </tr>
+  <tr>
+    <td class="heading">Slice</td>
+    <td>{{data | slice:6:15}}</td>
+  </tr>
+  <tr>
+    <td class="heading">JSON</td>
+    <td>{{items | json}}</td>
+  </tr>
+  <tr>
+    <td class="heading">Number</td>
+    <td>{{aNumber | number:'3.3-4'}} <input type="number" name="" [(ngModel)]="aNumber"></td>
+  </tr>
+  <tr>
+    <td class="heading"></td>
+    <td><small>Minimum 3 digit before decimal, Minimum 3 digit after decimal and maximum 4 digit after decimal</small></td>
+  </tr>
+  <tr>
+    <td class="heading">Currency</td>
+    <td>{{2000 | currency: 'INR'}}</td>
+  </tr>
+  <tr>
+    <td class="heading">date(short)</td>
+    <td>{{dateVar | date:'short'}}</td>
+  </tr>
+  <tr>
+    <td class="heading">date(shortDate)</td>
+    <td>{{dateVar | date:'shortDate'}}</td>
+  </tr>
+  <tr>
+    <td class="heading">date(shortTime)</td>
+    <td>{{dateVar | date:'shortTime'}}</td>
+  </tr>
+</table>

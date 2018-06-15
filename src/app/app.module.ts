@@ -12,6 +12,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { LeftmenuitemComponent } from './leftmenuitem/leftmenuitem.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { AboutmeComponent } from './aboutme/aboutme.component';
+import { ChildComponent } from './child/child.component';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { AboutmeComponent } from './aboutme/aboutme.component';
     RightpanelComponent,
     LeftmenuitemComponent,
     DashboardComponent,
-    AboutmeComponent
+    AboutmeComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,
@@ -41,6 +43,10 @@ import { AboutmeComponent } from './aboutme/aboutme.component';
       {
         path : 'aboutme',
         component : AboutmeComponent
+      },
+      {
+        path: '**',
+        redirectTo: '/rightpanel'
       }
     ])
   ],

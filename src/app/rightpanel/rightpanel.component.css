@@ -24,3 +24,11 @@ li {
 ul {
   list-style-type: none;
 }
+.parent-container {
+  background-color: #b7d5b9;
+  border-radius: 5px;
+  padding: 15px 0px;
+}
+.parent-container h6 {
+    padding-left: 15px;
+}

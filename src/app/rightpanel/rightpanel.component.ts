@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
@@ -7,21 +7,27 @@ import {NgbModal, ModalDismissReasons} from '@ng-bootstrap/ng-bootstrap';
   styleUrls: ['./rightpanel.component.css']
 })
 export class RightpanelComponent implements OnInit {
-
-  constructor(private modalService: NgbModal) {
-  //alert("constructor");
-  }
-
-  ngOnInit() {
-  //alert("ngOnInit");
-  }
   data ='Text From Variable';
+  aNumber:number = 76.55
   id = "text1";
   dataString = 'Text From Function';
   showthis = true;
   dontShowthis = false;
   showIf = true;
   items = ['item 1', 'item 2'];
+  calledFromChildCtr:number = 0;
+  childCalledCounter:number = 0;
+  dateVar:any = new Date()
+
+  @ViewChild('childComponent') childRefference;
+
+  constructor(private modalService: NgbModal) {
+  console.log("constructor");
+  }
+
+  ngOnInit() {
+  console.log("ngOnInit");
+  }
 
   toggleIfElse() {
     this.showIf = !this.showIf;
@@ -34,11 +40,34 @@ export class RightpanelComponent implements OnInit {
   }
   onclickBtn() {
     this.data = "Changes on click"
+    let arr = [10, 2, 5, 3, 7, 4, 9, 8]
+    //All bellow looops are exactly the same
+    //For Each loop
+    arr.forEach(function(ar){
+      console.log(ar);
+    });
+    console.log("-----------------");
+    // Arrow function
+    arr.forEach((ar) => {
+      console.log(ar)
+    });
+    console.log("-----------------");
+    // Arrow function with only one argument and one line of code
+    arr.forEach(ar => console.log(ar));
+    console.log("-----------------");
+    //for of
+    for(let ar of arr) {
+      console.log(ar)
+    }
+    console.log("-----------------");
+    //for in
+    for(let ar in arr) {
+      console.log(arr[ar])
+    }
   }
   additems() {
     var item = "item " + Math.floor(Math.random()*10);
     this.items.push(item);
-    console.log(this.items)
   }
 
   // Modal Code Start
@@ -59,6 +88,12 @@ export class RightpanelComponent implements OnInit {
     } else {
       return  `with: ${reason}`;
     }
+  }
+  parentFunction(event) {
+    this.calledFromChildCtr = event;
+  }
+  callChildFunction() {
+    this.childRefference.childFunction(++this.childCalledCounter)
   }
   // Modal Code Ends
 

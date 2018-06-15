@@ -20,6 +20,7 @@
 <li>
   <div class="row">
     <u class = "col-sm-5">Event Binding (click) :</u> <input type="button" value="Click to cahnge text" class = "btn btn-sm btn-primary" (click) = "onclickBtn()">
+    <small>Check code for demonstration of for Each loop, Arrow function, for in loop, for of loop</small>
   </div>
 <li>
   <div class="row">
@@ -43,11 +44,11 @@
 <li class = "col-12"><u>ngIf</u><br>
 <div class = "row">
   <p class = "col-sm-5"> This is visible : </p>
-  <p class = "col-sm-7"> [ <span *ngIf = "showthis">Hello</span> ] </p>
+  <p class = "col-sm-7"> [ <span *ngIf = "showIf">Hello</span> ] </p>
 </div>
 <div class = "row">
   <p class = "col-sm-5"> This is not visible : </p>
-  <p class = "col-sm-7"> [ <span *ngIf = "dontShowthis">World</span> ] </p>
+  <p class = "col-sm-7"> [ <span *ngIf = "!showIf">World</span> ] </p>
 </div>
 </li>
 <li class = "col-12"><u>ngIf Else </u> <input type="button" class="btn btn-sm btn-success" value="Toggle if else" (click) = "toggleIfElse()"><br>
@@ -80,6 +81,63 @@
 </li>
 </ul>
 <hr>
+<h4>PIPE</h4>
+<table>
+  <tr>
+    <th>Lower case</th>
+    <td>{{data | lowercase}}</td>
+  </tr>
+  <tr>
+    <th>Upper case</th>
+    <td>{{data | uppercase}}</td>
+  </tr>
+  <tr>
+    <th>Title case</th>
+    <td>{{data | titlecase}}</td>
+  </tr>
+  <tr>
+    <th>Slice</th>
+    <td>{{data | slice:6:15}}</td>
+  </tr>
+  <tr>
+    <th>JSON</th>
+    <td>{{items | json}}</td>
+  </tr>
+  <tr>
+    <th>Number</th>
+    <td>{{aNumber | number:'3.3-4'}} <input type="number" name="" [(ngModel)]="aNumber"></td>
+  </tr>
+  <tr>
+    <th></th>
+    <td><small>Minimum 3 digit before decimal, Minimum 3 digit after decimal and maximum 4 digit after decimal</small></td>
+  </tr>
+  <tr>
+    <th>Currency</th>
+    <td>{{2000 | currency: 'INR'}}</td>
+  </tr>
+  <tr>
+    <th>date(short)</th>
+    <td>{{dateVar | date:'short'}}</td>
+  </tr>
+  <tr>
+    <th>date(shortDate)</th>
+    <td>{{dateVar | date:'shortDate'}}</td>
+  </tr>
+  <tr>
+    <th>date(shortTime)</th>
+    <td>{{dateVar | date:'shortTime'}}</td>
+  </tr>
+</table>
+<hr>
+<h4>PARENT-CHIELD component Interaction</h4>
+  <div class="row parent-container">
+    <h6>PARENT COMPONENT</h6>
+    <span class = "col-12" *ngIf = "calledFromChildCtr > 0">Parent function called by child <b>{{calledFromChildCtr}}</b> times</span>
+    <span class = "col-12"><button type="button" class="green-small" (click) = "callChildFunction()">Call Child Function</button></span>
+    <app-child class = "col-12" #childComponent parentValue = "'This is passed from parent'" (callParentFunction) = "parentFunction($event)"></app-child>
+  </div>
+<hr>
+<h4>BOOTSTRAP</h4>
 <ng-template #content let-c="close" let-d="dismiss">
   <div class="modal-header">
     <h4 class="modal-title">Modal title</h4>
@@ -94,7 +152,6 @@
     <button type="button" class="btn btn-secondary" (click)="c('Close click')">Close</button>
   </div>
 </ng-template>
-
 <button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button>
 
 

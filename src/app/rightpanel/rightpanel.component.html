@@ -1,4 +1,4 @@
-<h2>Basics of Angular</h2>
+<h3>Basics of Angular <small class = "text-danger">To do is in Dashboard</small></h3>
 <b>Output Binding</b> <br>
 <ul>
 <li>
@@ -89,7 +89,7 @@
   <div class="row parent-container">
     <h6>PARENT COMPONENT</h6>
     <span class = "col-12" *ngIf = "calledFromChildCtr > 0">Parent function called by child <b>{{calledFromChildCtr}}</b> times</span>
-    <span class = "col-12"><button type="button" class="btn btn-sm btn-success" (click) = "callChildFunction()">Call Child Function</button></span>
+    <span class = "col-12"><button type="button" class="btn btn-sm btn-success" (click) = "callChildFunction()">Call Child Function (@ViewChild)</button></span>
     <app-child class = "col-12" #childComponent parentValue = "'This is passed from parent'" (callParentFunction) = "parentFunction($event)"></app-child>
   </div>
 <hr>

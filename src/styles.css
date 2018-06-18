@@ -8,3 +8,8 @@
 .btn {
   cursor: pointer;
 }
+.heading-text {
+    font-weight: 500;
+    line-height: 47px;
+    display: block;
+}

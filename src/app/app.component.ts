@@ -13,7 +13,7 @@ export class AppComponent {
     private router: Router
   ) {
     router.events.subscribe((url:any) => this.url = url);
-    console.log(this.url);    
+    console.log(this.url);
     // if(this.url == "/"){
     //   this.router.navigate(['/rightpanel']);
     // }
@@ -23,17 +23,17 @@ export class AppComponent {
   }
   changeLink(link){
     switch (link) {
-      case "BASICS": 
+      case "BASICS":
         this.router.navigate(['/rightpanel']);
         break;
-      case "DASHBOARD": 
+      case "TODO":
         this.router.navigate(['/dashboard']);
         break;
-      case "NEW ORDER": 
+      case "NEW ORDER":
         this.router.navigate(['/dashboard']);
         break;
-      case "ABOUT ME": 
-        this.router.navigate(['/aboutme']);
+      case "SERVICES":
+        this.router.navigate(['/services']);
         break;
       default:
         break;

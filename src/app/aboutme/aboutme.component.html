@@ -1,3 +1,19 @@
-<p>
-  aboutme works!
-</p>
+<h5>SERVICES</h5>
+<span class = "heading-text">Covered in this Page</span>
+Rxjs :
+<ul>
+  <li>Services <small>(dependancy injector)</small></li>
+  <li>HttpClientModule</li>
+  <li>HttpClient <small>(Returns observable)</small></li>
+  <li>Observable <small>Use interface to cast data)</small></li>
+  <li>subscribe <small>(Subscribe to the Observable)</small></li>
+  <li>Error Handler <small>(HttpErrorResponse, throwError, catchError)</small></li>
+</ul>
+
+<span class = "heading-text">Output From Service</span>
+Names :
+<ul>
+  <li *ngFor="let detail of details">{{detail.name}}</li>
+</ul>
+<span class = "heading-text">Error From Service</span>
+<span class = "text-danger">{{errordata}}</span>

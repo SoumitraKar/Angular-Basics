@@ -1,8 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
 import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http'
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -14,7 +14,6 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AboutmeComponent } from './aboutme/aboutme.component';
 import { ChildComponent } from './child/child.component';
 import { PipeComponent } from './pipe/pipe.component';
-
 
 @NgModule({
   declarations: [
@@ -29,9 +28,9 @@ import { PipeComponent } from './pipe/pipe.component';
     PipeComponent
   ],
   imports: [
+    HttpClientModule,
     BrowserModule,
     FormsModule,
-    HttpModule,
     NgbModule.forRoot(),
     RouterModule.forRoot([
       {
@@ -43,7 +42,7 @@ import { PipeComponent } from './pipe/pipe.component';
         component : DashboardComponent
       },
       {
-        path : 'aboutme',
+        path : 'services',
         component : AboutmeComponent
       },
       {

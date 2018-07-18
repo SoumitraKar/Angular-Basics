@@ -1,0 +1,68 @@
+<h5>ES 6</h5>
+<span class = "heading-text">For Loop example</span>
+<pre class = "row">
+  <div class = "col-lg-4 col-md-5">
+    <b>ForEach (New)</b>
+    <code>
+data.forEach(function(datum) {{ '{' }}
+  datum.value
+}
+    </code>
+  </div>
+
+  <div class = "col-lg-4 col-md-5">
+    <b>For Of (Old)</b>
+    <code>
+for(let datum of data) {{ '{' }}
+  datum.value
+}
+    </code>
+  </div>
+
+  <div class = "col-lg-4 col-md-5">
+    <b>For In (Old)</b>
+    <code>
+for(let datum in data) {{ '{' }}
+  data[datum].value
+}
+    </code>
+  </div>
+</pre>
+
+<span class = "heading-text">Arrow Function</span>
+
+<pre class = "row">
+<div class="col-12">
+<b>Normal function</b>
+<code>
+function double(a) {{ '{' }}
+  let c = a * 2;
+  return c;
+}
+</code>
+</div>
+
+<div class="col-lg-4 col-md-5">
+<b>Arrow Function</b>
+<code>
+add = (a) => {{ '{' }}
+let c = a * 2;
+  return c
+}
+</code>
+</div>
+
+<div class="col-lg-5 col-md-5">
+<b>Arrow Function</b>
+<small>
+  <ul>
+    <li>If only one argument is there we can ignore ()</li>
+    <li>If only one line of code is there we can ignore {{ '{' }}}</li>
+    <li>If only return statement is there we can ignore the "return" keyword</li>
+  </ul>
+</small>
+<code>
+add = a => a * 2
+</code>
+</div>
+</pre>

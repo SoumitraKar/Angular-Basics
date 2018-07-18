@@ -38,30 +38,6 @@ export class RightpanelComponent implements OnInit {
   }
   onclickBtn() {
     this.data = "Changes on click"
-    let arr = [10, 2, 5, 3, 7, 4, 9, 8]
-    //All bellow looops are exactly the same
-    //For Each loop
-    arr.forEach(function(ar){
-      console.log(ar);
-    });
-    console.log("-----------------");
-    // Arrow function
-    arr.forEach((ar) => {
-      console.log(ar)
-    });
-    console.log("-----------------");
-    // Arrow function with only one argument and one line of code
-    arr.forEach(ar => console.log(ar));
-    console.log("-----------------");
-    //for of
-    for(let ar of arr) {
-      console.log(ar)
-    }
-    console.log("-----------------");
-    //for in
-    for(let ar in arr) {
-      console.log(arr[ar])
-    }
   }
   additems() {
     var item = "item " + Math.floor(Math.random()*10);

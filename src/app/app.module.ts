@@ -14,6 +14,11 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AboutmeComponent } from './aboutme/aboutme.component';
 import { ChildComponent } from './child/child.component';
 import { PipeComponent } from './pipe/pipe.component';
+import { Es6Component } from './es6/es6.component';
+import { AngularMaterialComponent } from './angular-material/angular-material.component';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import {MatButtonModule, MatCheckboxModule} from '@angular/material';
+import {MatSortModule} from '@angular/material/sort';
 
 @NgModule({
   declarations: [
@@ -25,11 +30,15 @@ import { PipeComponent } from './pipe/pipe.component';
     DashboardComponent,
     AboutmeComponent,
     ChildComponent,
-    PipeComponent
+    PipeComponent,
+    Es6Component,
+    AngularMaterialComponent
   ],
   imports: [
     HttpClientModule,
     BrowserModule,
+    BrowserAnimationsModule,
+    MatButtonModule, MatCheckboxModule,
     FormsModule,
     NgbModule.forRoot(),
     RouterModule.forRoot([
@@ -44,6 +53,14 @@ import { PipeComponent } from './pipe/pipe.component';
       {
         path : 'services',
         component : AboutmeComponent
+      },
+      {
+        path : 'es6',
+        component : Es6Component
+      },
+      {
+        path : 'AngularMaterial',
+        component : AngularMaterialComponent
       },
       {
         path: '**',

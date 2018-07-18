@@ -29,11 +29,14 @@ export class AppComponent {
       case "TODO":
         this.router.navigate(['/dashboard']);
         break;
-      case "NEW ORDER":
-        this.router.navigate(['/dashboard']);
+      case "MATERIAL":
+        this.router.navigate(['/AngularMaterial']);
         break;
       case "SERVICES":
         this.router.navigate(['/services']);
+        break;
+      case "ES6":
+        this.router.navigate(['/es6']);
         break;
       default:
         break;

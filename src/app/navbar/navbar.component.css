@@ -43,3 +43,6 @@ nav a.active {
   color: #98caf4 !important;
   text-decoration: underline;
 }
+a.nav-link {
+    margin-right: 18px;
+}

@@ -15,7 +15,7 @@ export class TestServiceService {
   constructor(private http: HttpClient) {  }
 
   getDetails():Observable<Details[]> {
-    return this.http.get<Details[]>('https://jsonplaceholder.typicode.com/users');
+    return this.http.get<Details[]>('https://jsonplaceholder.typicode.com/users').pipe(catchError(this.errorHandler));
   }
   getErrorToHandle():Observable<Details[]> {
     return this.http.get<Details[]>('localhost:9898/xyz').pipe(catchError(this.errorHandler))

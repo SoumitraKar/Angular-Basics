@@ -4,7 +4,7 @@
 <br>
 <mat-checkbox>Check Box</mat-checkbox>
 <hr>
-<h6>Table Sortable</h6>
+<h5>Sortable Table</h5>
 <table matSort (matSortChange)="sortData($event)">
   <tr>
     <th mat-sort-header="name">Dessert (100g)</th>
@@ -22,3 +22,26 @@
     <td>{{dessert.protein}}</td>
   </tr>
 </table>
+
+<hr>
+
+<h5>Text box</h5>
+<mat-form-field appearance="outline">
+  <mat-label >Enter your user name</mat-label> 
+  <input matInput placeholder="Placeholder">
+  <mat-hint >You can also use your email</mat-hint>
+</mat-form-field>
+
+<hr>
+
+<h5>Date Picker</h5>
+<mat-form-field>
+  <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-datepicker #picker></mat-datepicker>
+</mat-form-field>
+
+<hr>
+
+<h5>Tree</h5>
+<h4>To Do</h4>

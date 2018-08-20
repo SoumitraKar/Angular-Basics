@@ -13,3 +13,12 @@ small ul {
 small {
     float: left;
 }
+.let-vs-var td {
+    padding-right: 30px;
+}
+.let-vs-var th {
+    box-shadow: 0px 1px 0px black;
+}
+table.let-vs-var {
+    margin-bottom: 20px;
+}

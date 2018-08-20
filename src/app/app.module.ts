@@ -10,15 +10,51 @@ import { LeftPanelComponent } from './leftpanel/leftpanel.component';
 import { RightpanelComponent } from './rightpanel/rightpanel.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import { LeftmenuitemComponent } from './leftmenuitem/leftmenuitem.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { TodoComponent } from './todo/todo.component';
 import { AboutmeComponent } from './aboutme/aboutme.component';
 import { ChildComponent } from './child/child.component';
 import { PipeComponent } from './pipe/pipe.component';
 import { Es6Component } from './es6/es6.component';
 import { AngularMaterialComponent } from './angular-material/angular-material.component';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
-import {MatButtonModule, MatCheckboxModule} from '@angular/material';
-import {MatSortModule} from '@angular/material/sort';
+import {
+  MatAutocompleteModule,
+  MatBadgeModule,
+  MatBottomSheetModule,
+  MatButtonModule,
+  MatButtonToggleModule,
+  MatCardModule,
+  MatCheckboxModule,
+  MatChipsModule,
+  MatDatepickerModule,
+  MatDialogModule,
+  MatDividerModule,
+  MatExpansionModule,
+  MatFormFieldModule,
+  MatGridListModule,
+  MatIconModule,
+  MatInputModule,
+  MatListModule,
+  MatMenuModule,
+  MatNativeDateModule,
+  MatPaginatorModule,
+  MatProgressBarModule,
+  MatProgressSpinnerModule,
+  MatRadioModule,
+  MatRippleModule,
+  MatSelectModule,
+  MatSidenavModule,
+  MatSliderModule,
+  MatSlideToggleModule,
+  MatSnackBarModule,
+  MatSortModule,
+  MatStepperModule,
+  MatTableModule,
+  MatTabsModule,
+  MatToolbarModule,
+  MatTooltipModule,
+  MatTreeModule,
+} from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -27,7 +63,7 @@ import {MatSortModule} from '@angular/material/sort';
     AppComponent,
     RightpanelComponent,
     LeftmenuitemComponent,
-    DashboardComponent,
+    TodoComponent,
     AboutmeComponent,
     ChildComponent,
     PipeComponent,
@@ -38,7 +74,7 @@ import {MatSortModule} from '@angular/material/sort';
     HttpClientModule,
     BrowserModule,
     BrowserAnimationsModule,
-    MatButtonModule, MatCheckboxModule,
+    MatButtonModule, MatCheckboxModule, MatSortModule, MatDatepickerModule, MatFormFieldModule, MatInputModule, MatIconModule, MatNativeDateModule,
     FormsModule,
     NgbModule.forRoot(),
     RouterModule.forRoot([
@@ -47,8 +83,8 @@ import {MatSortModule} from '@angular/material/sort';
         component : RightpanelComponent
       },
       {
-        path : 'dashboard',
-        component : DashboardComponent
+        path : 'todo',
+        component : TodoComponent
       },
       {
         path : 'services',

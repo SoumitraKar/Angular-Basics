@@ -27,7 +27,7 @@ export class AppComponent {
         this.router.navigate(['/rightpanel']);
         break;
       case "TODO":
-        this.router.navigate(['/dashboard']);
+        this.router.navigate(['/todo']);
         break;
       case "MATERIAL":
         this.router.navigate(['/AngularMaterial']);

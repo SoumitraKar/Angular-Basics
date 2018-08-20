@@ -1,4 +1,4 @@
-<h5>SERVICES</h5>
+<h5>SERVICES <small>In aboutme section of code</small></h5>
 <span class = "heading-text">Covered in this Page</span>
 Rxjs :
 <ul>
@@ -9,11 +9,13 @@ Rxjs :
   <li>subscribe <small>(Subscribe to the Observable)</small></li>
   <li>Error Handler <small>(HttpErrorResponse, throwError, catchError)</small></li>
 </ul>
+<span class = "heading-text">Output From get-Json service <small>Hard coded data</small></span>
+<span class = "text-primary">{{jsonValue[0].name}}</span>
 
-<span class = "heading-text">Output From Service</span>
+<span class = "heading-text">Output From test-service <small>Data from service</small></span>
 Names :
 <ul>
   <li *ngFor="let detail of details">{{detail.name}}</li>
 </ul>
-<span class = "heading-text">Error From Service</span>
+<span class = "heading-text">Error From test-service</span>
 <span class = "text-danger">{{errordata}}</span>

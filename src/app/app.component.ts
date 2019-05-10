@@ -22,9 +22,10 @@ export class AppComponent {
     this.open = open;
   }
   changeLink(link){
+    console.log(link)
     switch (link) {
       case "BASICS":
-        this.router.navigate(['/rightpanel']);
+        this.router.navigate(['/basics']);
         break;
       case "TODO":
         this.router.navigate(['/todo']);
@@ -37,6 +38,9 @@ export class AppComponent {
         break;
       case "ES6":
         this.router.navigate(['/es6']);
+        break;
+      case "OTHERS":
+        this.router.navigate(['/others']);
         break;
       default:
         break;

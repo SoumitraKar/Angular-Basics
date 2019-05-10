@@ -1,3 +1,24 @@
 h3 small {
   font-size: 12px;
 }
+.set_inline_blocks {
+  display: inline-block;
+}
+.all_box {
+  margin: 20px;
+  border: 1px solid red;
+  padding: 20px;
+}
+.margin_1px {
+  border: 1px solid red;
+}
+.floating_child {
+  float: left;
+  border: 1px solid green;
+  padding: 5px;
+  background-color: #f2fff2;
+}
+.parent_class {
+  border: 1px solid black;
+  padding: 5px;
+}

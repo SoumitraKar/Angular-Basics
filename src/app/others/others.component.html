@@ -1,0 +1,40 @@
+<b>Topics covered</b>
+<br>
+<ul>
+  <li>Closures</li>
+  <li>Function Prototype <small>[object].prototype.[function] = function() {{ '{' }} }</small></li>
+  <li>Promise</li>
+  <li>Copy Values - <b>Spread Operators</b></li>
+  <li>Object.seal() - <b>Can't add new properties but can modify existing ones</b></li>
+  <li>Object.freeze() - <b>Can't add new properties and can't modify existing ones</b></li>
+</ul>
+<h6>Promise</h6>
+<code>p = new Promise(function(resolve, reject) {{ '{' }} <br>
+  :::: if() <br>
+  resolve(x) <br>
+  :::: else  <br>
+  reject(y)
+}
+:::
+p.then(function(fromResolve) {{ '{' }} <br>
+  :::
+}).catch(function(fromReject){{ '{' }}}) <br>
+</code>
+<code>
+
+</code>
+<br>
+<code>console.log(7 > 6 > 5); Returns False (true > 5 or 1 > 5 is false)
+console.log(5 < 6 < 7); Returns true (true < 7 or 1 < 7 is true)
+</code>
+<hr>
+<h6>Example: Copy Values - <b>Spread Operators</b></h6>
+<code>let arrConst = [...this.arr1] // Copies Value of array
+let objConst = {{ '{' }}...this.obj1} // Copies Value of object
+</code>
+<hr>
+<h6>Extra Tricks</h6>
+<code>console.log(5 + "2"); Returns 52
+console.log(5 - "2"); Returns 3
+console.log(5 - "2x"); Returns NaN
+</code>

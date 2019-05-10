@@ -7,8 +7,8 @@ import { HttpClientModule } from '@angular/common/http'
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { LeftPanelComponent } from './leftpanel/leftpanel.component';
-import { RightpanelComponent } from './rightpanel/rightpanel.component';
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { BasicsComponent } from './basics/basics.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LeftmenuitemComponent } from './leftmenuitem/leftmenuitem.component';
 import { TodoComponent } from './todo/todo.component';
 import { AboutmeComponent } from './aboutme/aboutme.component';
@@ -55,20 +55,22 @@ import {
   MatTooltipModule,
   MatTreeModule,
 } from '@angular/material';
+import { OthersComponent } from './others/others.component';
 
 @NgModule({
   declarations: [
     NavbarComponent,
     LeftPanelComponent,
     AppComponent,
-    RightpanelComponent,
+    BasicsComponent,
     LeftmenuitemComponent,
     TodoComponent,
     AboutmeComponent,
     ChildComponent,
     PipeComponent,
     Es6Component,
-    AngularMaterialComponent
+    AngularMaterialComponent,
+    OthersComponent
   ],
   imports: [
     HttpClientModule,
@@ -79,8 +81,8 @@ import {
     NgbModule.forRoot(),
     RouterModule.forRoot([
       {
-        path : 'rightpanel',
-        component : RightpanelComponent
+        path : 'basics',
+        component : BasicsComponent
       },
       {
         path : 'todo',
@@ -99,8 +101,12 @@ import {
         component : AngularMaterialComponent
       },
       {
+        path : 'others',
+        component : OthersComponent
+      },
+      {
         path: '**',
-        redirectTo: '/rightpanel'
+        redirectTo: '/basics'
       }
     ])
   ],

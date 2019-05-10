@@ -1,4 +1,4 @@
-<h3>Basics of Angular <small class = "text-danger">To do</small></h3>
+<h3>Basics of Angular <small class = "text-danger">rightpanel</small></h3>
 <b>Output Binding</b> <br>
 <ul>
 <li>
@@ -80,6 +80,21 @@
 </li>
 </ul>
 <hr>
+<h4><b>Lifecycle Hooks </b></h4>
+<ul class = "well">
+  <li>constructor</li>
+  <li>ngOnChanges</li>
+  <li>ngOnInit</li>
+  <li>ngDoCheck</li>
+  <ul>
+    <li>ngAfterContentInit</li>
+    <li>ngAfterContentChecked</li>
+    <li>ngAfterViewInit</li>
+    <li>ngAfterViewChecked</li>
+  </ul>
+  <li>ngOnDestroy</li>
+</ul>
+<hr>
 <b>PIPE</b><br><br>
 <app-pipe></app-pipe>
 
@@ -92,48 +107,5 @@
     <app-child class = "col-12" #childComponent parentValue = "'This is passed from parent'" (callParentFunction) = "parentFunction($event)"></app-child>
   </div>
 <hr>
-<b>Bootstrap</b><br><br>
-<ng-template #content let-c="close" let-d="dismiss">
-  <div class="modal-header">
-    <h4 class="modal-title">Modal title</h4>
-    <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
-      <span aria-hidden="true">&times;</span>
-    </button>
-  </div>
-  <div class="modal-body">
-    <p>One fine body&hellip;</p>
-  </div>
-  <div class="modal-footer">
-    <button type="button" class="btn btn-secondary" (click)="c('Close click')">Close</button>
-  </div>
-</ng-template>
-<button class="btn btn-lg btn-outline-primary" (click)="open(content)">Launch demo modal</button>
 
-
-<h4><b>Carousel </b></h4>
-<div class = "carousel_container">
-<ngb-carousel>
-  <ng-template ngbSlide>
-    <img src="http://www.tonybates.ca/wp-content/uploads/World-Wide-Web-map.jpg" class = "carousel_img">
-    <div class="carousel-caption">
-      <h3>First slide label</h3>
-      <p>Hakuna ma ta ta</p>
-    </div>
-  </ng-template>
-  <ng-template ngbSlide>
-    <img src="http://photography-cameras.org/images/stories/wide-angle-lens.jpg" class = "carousel_img">
-    <div class="carousel-caption">
-      <h3>Second slide label</h3>
-      <p>Jinga la la</p>
-    </div>
-  </ng-template>
-  <ng-template ngbSlide>
-    <img src="http://hd.wallpaperswide.com/thumbs/at_lands_end-t2.jpg" class = "carousel_img">
-    <div class="carousel-caption">
-      <h3>Second slide label</h3>
-      <p>Jinga la la</p>
-    </div>
-  </ng-template>
-</ngb-carousel>
-</div>
 <br><br><br>

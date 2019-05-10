@@ -12,7 +12,7 @@
 
 **2. On Command Prompt**
 
-•	Npm install –g @angular/cli (Install angular 4 cli)
+•	Npm install @angular/cli -g (Install angular 4 cli)
 
 •	ng new Project_Name (Creates new angular 4 project )
 

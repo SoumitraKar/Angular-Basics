@@ -42,6 +42,9 @@ export class AppComponent {
       case "OTHERS":
         this.router.navigate(['/others']);
         break;
+      case "REDUX":
+        this.router.navigate(['/redux']);
+        break;
       default:
         break;
     }

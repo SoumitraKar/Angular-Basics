@@ -2,7 +2,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { StoreModule } from '@ngrx/store';
 
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -56,6 +57,7 @@ import {
   MatTreeModule,
 } from '@angular/material';
 import { OthersComponent } from './others/others.component';
+import { ReduxComponent } from './redux/redux.component';
 
 @NgModule({
   declarations: [
@@ -70,7 +72,8 @@ import { OthersComponent } from './others/others.component';
     PipeComponent,
     Es6Component,
     AngularMaterialComponent,
-    OthersComponent
+    OthersComponent,
+    ReduxComponent
   ],
   imports: [
     HttpClientModule,
@@ -103,6 +106,10 @@ import { OthersComponent } from './others/others.component';
       {
         path : 'others',
         component : OthersComponent
+      },
+      {
+        path : 'redux',
+        component : ReduxComponent
       },
       {
         path: '**',

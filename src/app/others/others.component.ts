@@ -42,13 +42,23 @@ export class OthersComponent implements OnInit {
 
   constructor() {
     this.callClosure();
-
+    let xArr = [1,2,3]
     //Function Prototype Example Starts
     this.protoFunc.prototype.getJ = function() {
       return this.j;
     }
     var protoFun = new this.protoFunc(2);
     console.log(protoFun.getJ())
+    //
+    Array.prototype.printMe = () => {
+      console.log("IN PRINT");
+      console.log(this);
+      // this.forEach(elem => {
+      //   console.log(elem);
+      // })
+    }
+    console.log("xArr.print")
+    xArr.printMe();
     //Function Prototype Example Ends
 
     //Copy Objects Example Starts

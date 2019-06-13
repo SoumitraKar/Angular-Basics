@@ -24,8 +24,10 @@
     "@angular/platform-browser-dynamic": "^6.0.9",
     "@angular/router": "^6.0.9",
     "@ng-bootstrap/ng-bootstrap": "^2.2.0",
+    "@ngrx/store": "^7.4.0",
     "bootstrap": "^3.3.7",
     "core-js": "^2.5.7",
+    "redux": "^4.0.1",
     "rxjs": "^6.2.2",
     "zone.js": "^0.8.26"
   },
